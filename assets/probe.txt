@@ -1,0 +1,1 @@
+ZENIX connectivity test OK

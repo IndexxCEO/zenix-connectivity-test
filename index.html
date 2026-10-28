@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>ZENIX — проверка доступности</title>
+  <link rel="icon" href="assets/small.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">ZENIX / ТЕСТ СЕТИ</p>
+  <h1>ZENIX — проверка доступности</h1>
+  <p>Откройте страницу без VPN. Проверка покажет, загружаются ли ресурсы этого сайта в вашей текущей сети.</p></header>
+  <section aria-labelledby="results-title">
+    <h2 id="results-title">Результаты</h2>
+    <p>HTML: страница открылась — успешно.</p>
+    <p id="js-status">JavaScript: выполнение пока не подтверждено.</p>
+    <noscript><p class="error">JavaScript отключён или не загрузился. Включите его и обновите страницу. Без JavaScript остальные проверки не выполняются.</p></noscript>
+    <button id="check" type="button" disabled>Повторить проверку</button>
+    <p id="summary" role="status" aria-live="polite">Ожидание JavaScript. Если сообщение не меняется, скрипт отключён или не загрузился.</p>
+    <div class="cards">
+      <article><h3>Маленькое изображение</h3><p id="small-status">Не проверено.</p><img id="small-image" alt="Маленькое тестовое изображение: цветной шум" width="32" height="32" hidden></article>
+      <article><h3>Крупное изображение</h3><p>Около 577 КиБ — существенно больше 16 КБ.</p><p id="large-status">Не проверено.</p><img id="large-image" alt="Крупное тестовое изображение: цветной шум" width="512" height="384" hidden></article>
+      <article><h3>Загрузка через fetch</h3><p id="fetch-status">Не проверено.</p><p>Проверяется ответ сервера и содержимое небольшого текстового файла.</p></article>
+    </div>
+  </section>
+  <section aria-labelledby="how-title"><h2 id="how-title">Как проверить</h2>
+    <ol><li>В России и Италии откройте HTTPS-ссылку без VPN, прокси и обходных средств.</li><li>Дождитесь результатов (до 20 секунд). Нажмите «Повторить проверку».</li><li>Повторите по домашнему Wi-Fi, затем отключите Wi-Fi и проверьте через мобильную сеть. По возможности попробуйте другого оператора.</li><li>Если сайт вообще не открывается, это тоже результат. Запишите вручную страну, тип сети, оператора, время, браузер и текст ошибки, без имён, IP и других личных данных.</li></ol>
+    <p>Успех относится только к текущей сети и времени проверки. Он не гарантирует доступность во всей стране или в будущем. Загрузка ресурсов не проверяет будущие вход, API, аудио и видео ZENIX.</p>
+  </section>
+  <footer><p>Приложение не собирает и не отправляет IP-адреса, геолокацию, имена, cookies или аналитику. Результаты остаются на этой странице и не сохраняются приложением. При сетевых запросах хостинг видит адрес подключения и может вести технические журналы.</p></footer>
+</main>
+</body>
+</html>
